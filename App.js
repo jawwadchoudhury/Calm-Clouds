@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 
 import {
   useFonts,
@@ -32,10 +32,8 @@ export default function App() {
 
   const [weather, loading, error, refetchWeather] = useWeather(location);
 
-  if (!location) return null;
+  if (!location || loading || error) return null;
   if (errorLocation) return <Error error={errorLocation} />;
-  if (loading) return null;
-  if (error) return null;
 
   if (weather && !weather.isDay) {
     textColor = '#fff';
@@ -46,7 +44,7 @@ export default function App() {
 
   return (
     <View style={[styles.container, { backgroundColor: bgColor }]}>
-      <Navigation textColor={textColor} />
+      <Navigation textColor={textColor} refetchWeather={refetchWeather} />
 
       <View style={styles.spacer} />
 
@@ -55,11 +53,7 @@ export default function App() {
         <Icon textColor={textColor} bgColor={bgColor} isDay={weather.isDay} />
       </View>
 
-      <Region
-        textColor={textColor}
-        refetchWeather={refetchWeather}
-        region={location.region}
-      />
+      <Region textColor={textColor} region={location.region} />
     </View>
   );
 }
