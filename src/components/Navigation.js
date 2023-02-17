@@ -1,16 +1,20 @@
 import { SafeAreaView, StyleSheet } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
 
-import EvilIcon from 'react-native-vector-icons/EvilIcons';
-import Ionicons from 'react-native-vector-icons/Ionicons';
+import Fontiso from 'react-native-vector-icons/Fontisto';
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
-const Navigation = ({ textColor }) => {
+const Navigation = ({ textColor, refetchWeather }) => {
   return (
     <>
       <StatusBar style={textColor == '#010101' ? 'dark' : 'light'} />
       <SafeAreaView style={styles.navigation}>
-        <Ionicons name='location' size={26} color={textColor} />
-        <EvilIcon name='calendar' size={35} color={textColor} />
+        <MaterialCommunityIcons
+          name='cloud-refresh'
+          color={textColor}
+          size={22}
+          onPress={refetchWeather}
+        />
       </SafeAreaView>
     </>
   );
@@ -23,7 +27,7 @@ const styles = StyleSheet.create({
     height: '10%',
     flexDirection: 'row',
     alignItems: 'center',
-    justifyContent: 'space-between',
+    justifyContent: 'flex-end',
   },
 });
 
