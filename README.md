@@ -18,7 +18,23 @@
 
 > # Information
 
+* **Calm Clouds is a minimalist mobile application built with React-Native.**
+* **You can help me by doing a pull-requests to the project as long as you respect the UI concept.**
 
+<br/>
+
+> # How to contribute
+
+* **Run npm install .**
+* **Change the .env.example to .env and change the API_KEY to your own. The website for it is https://www.weatherapi.com/**
+
+<br/>
+
+> # To-Do
+
+* **Make a better splash UI**
+* **Make error handler UI**
+* **Add possibility to choose the city you want**
 
 > # Support me.
 
