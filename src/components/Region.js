@@ -2,16 +2,11 @@ import { View, Text, StyleSheet } from 'react-native';
 
 import MaterialIcon from 'react-native-vector-icons/MaterialIcons';
 
-const Region = ({ textColor, refetchWeather, region }) => {
+const Region = ({ textColor, region }) => {
   return (
     <View style={styles.region_container}>
       <Text style={[styles.region_text, { color: textColor }]}>
-        <MaterialIcon
-          name='my-location'
-          color={textColor}
-          size={14}
-          onPress={refetchWeather}
-        />
+        <MaterialIcon name='my-location' color={textColor} size={14} />
         &nbsp;{region.city}, {region.isoCountryCode}
       </Text>
     </View>
