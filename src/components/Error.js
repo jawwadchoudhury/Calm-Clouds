@@ -5,7 +5,9 @@ const Error = ({ error }) => {
     <SafeAreaView
       style={{ height: '100%', alignItems: 'center', justifyContent: 'center' }}
     >
-      <Text>{error}</Text>
+      <Text style={{ fontFamily: 'Yantramanav_400Regular', fontSize: 20 }}>
+        {error}
+      </Text>
     </SafeAreaView>
   );
 };
