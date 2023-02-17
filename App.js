@@ -32,8 +32,8 @@ export default function App() {
 
   const [weather, loading, error, refetchWeather] = useWeather(location);
 
-  if (!location || loading || error) return null;
   if (errorLocation) return <Error error={errorLocation} />;
+  if (!location || loading || error) return null;
 
   if (weather && !weather.isDay) {
     textColor = '#fff';
