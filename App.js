@@ -32,6 +32,7 @@ export default function App() {
 
   const [weather, loading, error, refetchWeather] = useWeather(location);
 
+  if (!fontsLoaded) return null;
   if (errorLocation) return <Error error={errorLocation} />;
   if (!location || loading || error) return null;
 
@@ -39,8 +40,6 @@ export default function App() {
     textColor = '#fff';
     bgColor = '#010101';
   }
-
-  if (!fontsLoaded) return null;
 
   return (
     <View style={[styles.container, { backgroundColor: bgColor }]}>
