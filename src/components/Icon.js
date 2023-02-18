@@ -6,12 +6,12 @@ const Icon = ({ textColor, bgColor, isDay }) => {
   const [hours, setHours] = useState(null);
 
   useEffect(() => {
-    const time = new Date().getHours() % 12;
-    setHours(time ? time : 12);
+    const time = 12;
+    setHours(time === 12 ? 0 : time);
   }, []);
 
   useEffect(() => {
-    if (hours) {
+    if (hours != null) {
       refs.current[hours].setNativeProps({
         style: styles.small_circle,
       });
