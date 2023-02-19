@@ -6,7 +6,7 @@ const Icon = ({ textColor, bgColor, isDay }) => {
   const [hours, setHours] = useState(null);
 
   useEffect(() => {
-    const time = new Date() % 12;
+    const time = new Date().getHours() % 12;
     setHours(time === 12 ? 0 : time);
   }, []);
 
