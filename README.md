@@ -43,13 +43,13 @@
 > # Support me.
 
 - Thanks for looking at this repository, if you like to press the ⭐ button!
-- Made by [Edward Elton](https://github.com/edwardelton).
+- Made by [Sir Lavoie](https://github.com/sirlavoie).
 
 <p align="center">
     <b>Informations</b><br>
-    <img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/edwardelton/Calm-Clouds?color=fff">
-    <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/edwardelton/Calm-Clouds?color=fff">
-    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/edwardelton/Calm-Clouds?color=fff">
-    <img alt="GitHub" src="https://img.shields.io/github/license/edwardelton/Calm-Clouds?color=fff">
-    <img alt="GitHub watchers" src="https://img.shields.io/github/watchers/edwardelton/Calm-Clouds?color=fff">
+    <img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/sirlavoie/Calm-Clouds?color=fff">
+    <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/sirlavoie/Calm-Clouds?color=fff">
+    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/sirlavoie/Calm-Clouds?color=fff">
+    <img alt="GitHub" src="https://img.shields.io/github/license/sirlavoie/Calm-Clouds?color=fff">
+    <img alt="GitHub watchers" src="https://img.shields.io/github/watchers/sirlavoie/Calm-Clouds?color=fff">
 </p>
