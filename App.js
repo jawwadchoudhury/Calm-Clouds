@@ -30,13 +30,14 @@ export default function App() {
 
   const [location, errorLocation] = useLocation();
 
-  const [weather, loading, error, refetchWeather] = useWeather(location);
+  const [weather, loading, error, isDay, refetchWeather] = useWeather(location);
+  
 
   if (!fontsLoaded) return null;
   if (errorLocation) return <Error error={errorLocation} />;
   if (!location || loading || error) return null;
 
-  if (weather && !weather.isDay) {
+  if (isDay == 0) {
     textColor = '#fff';
     bgColor = '#010101';
   }
@@ -49,7 +50,7 @@ export default function App() {
 
       <View style={styles.hero}>
         <Weather textColor={textColor} weather={weather} />
-        <Icon textColor={textColor} bgColor={bgColor} isDay={weather.isDay} />
+        <Icon textColor={textColor} bgColor={bgColor} />
       </View>
 
       <Region textColor={textColor} region={location.region} />
